@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Arcade_Basketball_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请扫描您附近的水平面" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lI-vZ-ZAK">
+                                <rect key="frame" x="90.5" y="658.5" width="233" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H95-bQ-DdU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AOU-PP-QS7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-RB-duC">
+                                            <rect key="frame" x="20" y="134" width="374" height="270"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="He2-6Z-RQz">
+                                            <rect key="frame" x="162" y="537.5" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="DRX-hl-kQg"/>
+                                                <constraint firstAttribute="width" constant="90" id="b5o-HF-5yk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdw-8b-CtR">
+                                            <rect key="frame" x="162" y="537.5" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="bo7-M6-rsl"/>
+                                                <constraint firstAttribute="height" constant="90" id="drj-4Y-Hd7"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="playButtonDown:" destination="BV1-FR-VrT" eventType="touchDown" id="qIA-7q-aUw"/>
+                                                <action selector="playButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jea-DG-hEw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ief-RB-duC" firstAttribute="centerX" secondItem="AOU-PP-QS7" secondAttribute="centerX" id="1aP-X9-LU0"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ief-RB-duC" secondAttribute="trailing" constant="20" id="DcQ-pP-EhV"/>
+                                        <constraint firstItem="xdw-8b-CtR" firstAttribute="centerX" secondItem="AOU-PP-QS7" secondAttribute="centerX" id="GXL-Wz-awZ"/>
+                                        <constraint firstItem="xdw-8b-CtR" firstAttribute="centerY" secondItem="AOU-PP-QS7" secondAttribute="centerY" multiplier="1.3" id="Nhc-ro-CL7"/>
+                                        <constraint firstItem="He2-6Z-RQz" firstAttribute="centerX" secondItem="AOU-PP-QS7" secondAttribute="centerX" id="cO8-YI-nax"/>
+                                        <constraint firstItem="Ief-RB-duC" firstAttribute="centerY" secondItem="AOU-PP-QS7" secondAttribute="centerY" multiplier="0.6" id="leZ-7p-faA"/>
+                                        <constraint firstItem="He2-6Z-RQz" firstAttribute="centerY" secondItem="AOU-PP-QS7" secondAttribute="centerY" multiplier="1.3" id="tBC-xR-BWg"/>
+                                        <constraint firstItem="Ief-RB-duC" firstAttribute="leading" secondItem="AOU-PP-QS7" secondAttribute="leading" constant="20" id="wpL-aJ-hg7"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1lI-vZ-ZAK" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="04f-eU-AZw"/>
+                            <constraint firstAttribute="trailing" secondItem="BrB-h1-WRS" secondAttribute="trailing" id="0vL-VZ-SnV"/>
+                            <constraint firstItem="H95-bQ-DdU" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="3e2-72-2em"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="G4H-Wx-gR0"/>
+                            <constraint firstItem="H95-bQ-DdU" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="bIF-yj-7nl"/>
+                            <constraint firstAttribute="bottom" secondItem="BrB-h1-WRS" secondAttribute="bottom" id="cob-lJ-VJK"/>
+                            <constraint firstItem="1lI-vZ-ZAK" firstAttribute="centerY" secondItem="U0K-SW-4ec" secondAttribute="centerY" multiplier="1.5" id="kVn-px-xF9"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="mLb-OO-tgx"/>
+                            <constraint firstItem="H95-bQ-DdU" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="qbF-aQ-8sz"/>
+                            <constraint firstItem="H95-bQ-DdU" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="uzL-Ch-v5N"/>
+                            <constraint firstAttribute="bottom" secondItem="H95-bQ-DdU" secondAttribute="bottom" id="xt3-bW-Exp"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="taS-6j-RgY" appends="YES" id="2pH-kN-0gj"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="H95-bQ-DdU" id="j2w-o9-5Vk"/>
+                        <outlet property="playButton" destination="xdw-8b-CtR" id="Q6a-g4-Asd"/>
+                        <outlet property="playImage" destination="He2-6Z-RQz" id="V8S-je-X5S"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="tipLabel" destination="1lI-vZ-ZAK" id="u8f-Px-Oj8"/>
+                        <outlet property="titleImage" destination="Ief-RB-duC" id="YI8-eC-G3N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="taS-6j-RgY">
+                    <connections>
+                        <action selector="screenTapped:" destination="BV1-FR-VrT" id="sE9-t4-sVM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="17.39130434782609" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="256" height="256"/>
+        <image name="title" width="517" height="270"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
